@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ROAMLY is a premium travel planner website designed for discovering destinations, curating itineraries, and planning unforgettable journeys."
+    />
+    <title>ROAMLY | Explore Beyond Boundaries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="ROAMLY home">
+          <span class="brand-mark">R</span>
+          <span class="brand-text">
+            <strong>ROAMLY</strong>
+            <small>Your Journey, Your Story.</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
+          <a href="#home">Home</a>
+          <a href="#explore">Explore</a>
+          <a href="#itinerary">Itinerary</a>
+          <a href="#guide">Travel Guide</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Toggle menu</span>
+        </button>
+
+        <a class="btn btn-primary nav-cta" href="#explore">Plan a Trip</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Curated escapes for curious travelers</p>
+            <h1>Explore Beyond Boundaries</h1>
+            <p class="lead">
+              Discover handpicked destinations, design flexible itineraries, and turn every trip into a story worth telling.
+            </p>
+
+            <form class="search-panel" role="search" aria-label="Search destinations">
+              <label class="sr-only" for="destinationSearch">Search destinations</label>
+              <input id="destinationSearch" type="search" placeholder="Search destinations, cities or experiences" />
+              <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+
+            <menu class="hero-menu" aria-label="Quick actions">
+              <li><a href="#explore">Explore Destinations</a></li>
+              <li><a href="#itinerary">Plan Your Itinerary</a></li>
+              <li><a href="#guide">Travel Guide</a></li>
+            </menu>
+          </div>
+
+          <aside class="hero-card" aria-label="Featured trip summary">
+            <div class="trip-badge">Featured getaway</div>
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+              alt="Lively beach destination with turquoise waters"
+            />
+            <div class="trip-details">
+              <div>
+                <p class="label">Next destination</p>
+                <h2>Bali Escape</h2>
+              </div>
+              <span class="price">From $1,299</span>
+            </div>
+            <ul class="mini-stats">
+              <li><strong>5 days</strong><span>Luxury stay</span></li>
+              <li><strong>4.9/5</strong><span>Traveler rating</span></li>
+              <li><strong>12+</strong><span>Unique spots</span></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section compact-stats">
+        <div class="container stats-grid">
+          <div class="stat-item">
+            <strong>120+</strong>
+            <span>Destinations</span>
+          </div>
+          <div class="stat-item">
+            <strong>18k</strong>
+            <span>Happy travelers</span>
+          </div>
+          <div class="stat-item">
+            <strong>96%</strong>
+            <span>Repeat bookings</span>
+          </div>
+          <div class="stat-item">
+            <strong>24/7</strong>
+            <span>Trip assistance</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="explore">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow accent">Popular destinations</p>
+            <h2>Find the place that fits your travel spirit</h2>
+          </div>
+
+          <div class="filter-bar" aria-label="Destination filters">
+            <button class="filter-btn active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="beach">Beaches</button>
+            <button class="filter-btn" type="button" data-filter="mountain">Mountains</button>
+            <button class="filter-btn" type="button" data-filter="heritage">Heritage</button>
+            <button class="filter-btn" type="button" data-filter="adventure">Adventure</button>
+            <button class="filter-btn" type="button" data-filter="nature">Nature</button>
+          </div>
+
+          <div class="destination-grid" id="destinationGrid">
+            <article class="destination-card" data-category="beach">
+              <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" alt="Amalfi Coast" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="tag">Beach</span>
+                  <span class="budget">$1,250</span>
+                </div>
+                <h3>Amalfi Coast</h3>
+                <p>Cliffside villages, sparkling harbors and unforgettable sunset drives.</p>
+                <button class="btn btn-secondary" type="button">Explore</button>
+              </div>
+            </article>
+
+            <article class="destination-card" data-category="mountain">
+              <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" alt="Swiss Alps" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="tag">Mountain</span>
+                  <span class="budget">$1,480</span>
+                </div>
+                <h3>Swiss Alps</h3>
+                <p>Epic trails, panoramic rail rides and alpine lodges with storybook views.</p>
+                <button class="btn btn-secondary" type="button">Explore</button>
+              </div>
+            </article>
+
+            <article class="destination-card" data-category="heritage">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80" alt="Kyoto" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="tag">Heritage</span>
+                  <span class="budget">$1,090</span>
+                </div>
+                <h3>Kyoto</h3>
+                <p>Temples, tea houses and culture-rich streets illuminated in the evening.</p>
+                <button class="btn btn-secondary" type="button">Explore</button>
+              </div>
+            </article>
+
+            <article class="destination-card" data-category="beach">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Bali" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="tag">Beach</span>
+                  <span class="budget">$1,320</span>
+                </div>
+                <h3>Bali</h3>
+                <p>Ubud wellness, surf-ready beaches and immersive island experiences.</p>
+                <button class="btn btn-secondary" type="button">Explore</button>
+              </div>
+            </article>
+
+            <article class="destination-card" data-category="nature">
+              <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Banff" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="tag">Nature</span>
+                  <span class="budget">$1,540</span>
+                </div>
+                <h3>Banff</h3>
+                <p>Crystal lakes, pine forests and dramatic peaks for slow, scenic travel.</p>
+                <button class="btn btn-secondary" type="button">Explore</button>
+              </div>
+            </article>
+
+            <article class="destination-card" data-category="adventure">
+              <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80" alt="Cappadocia" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="tag">Adventure</span>
+                  <span class="budget">$980</span>
+                </div>
+                <h3>Cappadocia</h3>
+                <p>Hot-air balloon views, valley hikes and unique cave stays under stars.</p>
+                <button class="btn btn-secondary" type="button">Explore</button>
+              </div>
+            </article>
+
+            <article class="destination-card" data-category="beach">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Santorini" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="tag">Beach</span>
+                  <span class="budget">$1,420</span>
+                </div>
+                <h3>Santorini</h3>
+                <p>Whitewashed villages, volcanic cliffs and chic dinners by the caldera.</p>
+                <button class="btn btn-secondary" type="button">Explore</button>
+              </div>
+            </article>
+
+            <article class="destination-card" data-category="heritage">
+              <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=80" alt="Marrakech" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="tag">Heritage</span>
+                  <span class="budget">$930</span>
+                </div>
+                <h3>Marrakech</h3>
+                <p>Markets, riads and warm desert evenings wrapped in a vibrant culture.</p>
+                <button class="btn btn-secondary" type="button">Explore</button>
+              </div>
+            </article>
+
+            <article class="destination-card" data-category="adventure">
+              <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=900&q=80" alt="Patagonia" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="tag">Adventure</span>
+                  <span class="budget">$1,760</span>
+                </div>
+                <h3>Patagonia</h3>
+                <p>Glacial trails, dramatic peaks and wild southern landscapes.</p>
+                <button class="btn btn-secondary" type="button">Explore</button>
+              </div>
+            </article>
+
+            <article class="destination-card" data-category="nature">
+              <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80" alt="Hokkaido" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="tag">Nature</span>
+                  <span class="budget">$1,180</span>
+                </div>
+                <h3>Hokkaido</h3>
+                <p>Vast national parks, wildflowers and dramatic seasonal scenery.</p>
+                <button class="btn btn-secondary" type="button">Explore</button>
+              </div>
+            </article>
+
+            <article class="destination-card" data-category="nature">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Lake Louise" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="tag">Nature</span>
+                  <span class="budget">$1,360</span>
+                </div>
+                <h3>Lake Louise</h3>
+                <p>Emerald waters, soaring mountains and refined mountain lodge stays.</p>
+                <button class="btn btn-secondary" type="button">Explore</button>
+              </div>
+            </article>
+
+            <article class="destination-card" data-category="heritage">
+              <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=900&q=80" alt="Rome" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="tag">Heritage</span>
+                  <span class="budget">$1,050</span>
+                </div>
+                <h3>Rome</h3>
+                <p>Historic landmarks, piazzas and artisanal cafés in the heart of Italy.</p>
+                <button class="btn btn-secondary" type="button">Explore</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="itinerary">
+        <div class="container itinerary-wrap">
+          <div class="section-heading left-aligned">
+            <p class="eyebrow accent">Sample itinerary</p>
+            <h2>Design a trip that flows beautifully</h2>
+          </div>
+
+          <div class="itinerary-layout">
+            <div class="itinerary-selector card-panel">
+              <h3>Choose a sample itinerary</h3>
+              <label class="sr-only" for="itinerarySelect">Select itinerary</label>
+              <select id="itinerarySelect" aria-label="Select itinerary">
+                <option value="bali">Bali Wellness Escape</option>
+                <option value="swiss">Swiss Alpine Journey</option>
+                <option value="kyoto">Kyoto Culture Trail</option>
+              </select>
+            </div>
+
+            <div class="itinerary-details card-panel" id="itineraryDetails" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="guide">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow accent">Travel guide</p>
+            <h2>Everything you need before you go</h2>
+          </div>
+
+          <div class="guide-grid">
+            <article class="guide-card card-panel">
+              <h3>Packing checklist</h3>
+              <ul class="styled-list checklist-list">
+                <li><input type="checkbox" id="passport" /><label for="passport">Passport and travel insurance</label></li>
+                <li><input type="checkbox" id="charger" /><label for="charger">Universal charger and power bank</label></li>
+                <li><input type="checkbox" id="clothes" /><label for="clothes">Weather-appropriate clothing</label></li>
+                <li><input type="checkbox" id="toiletries" /><label for="toiletries">Toiletries and reusable bottle</label></li>
+                <li><input type="checkbox" id="medication" /><label for="medication">Medication and first-aid kit</label></li>
+              </ul>
+            </article>
+
+            <article class="guide-card card-panel">
+              <h3>Essential travel tips</h3>
+              <ul class="styled-list tip-list">
+                <li>Book transport early for high-season routes and local flights.</li>
+                <li>Keep a digital and physical copy of important travel documents.</li>
+                <li>Carry small cash for local markets and taxis in remote destinations.</li>
+                <li>Respect local customs, dress codes and daily time schedules.</li>
+              </ul>
+            </article>
+
+            <article class="guide-card card-panel">
+              <h3>Local food recommendations</h3>
+              <ul class="styled-list food-list">
+                <li>Street tacos with fresh salsa and lime</li>
+                <li>Fresh rice bowls and grilled seafood by the coast</li>
+                <li>Seasonal ramen and sushi tasting menus in Tokyo-style districts</li>
+                <li>Slow-cooked curries with regional spices and local breads </li>
+              </ul>
+            </article>
+
+            <article class="guide-card card-panel">
+              <h3>Travel glossary</h3>
+              <dl class="travel-dictionary">
+                <div>
+                  <dt>Transit pass</dt>
+                  <dd>Useful for unlimited city movement on trains, buses and metro lines.</dd>
+                </div>
+                <div>
+                  <dt>Peak season</dt>
+                  <dd>High-demand travel months when prices and crowds rise significantly.</dd>
+                </div>
+                <div>
+                  <dt>Local guide</dt>
+                  <dd>A trained local expert who offers cultural, historical, and route insights.</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <div class="container faq-container">
+          <div class="section-heading center-heading">
+            <p class="eyebrow accent">Travel FAQ</p>
+            <h2>Quick answers before you book</h2>
+          </div>
+
+          <div class="faq-list">
+            <article class="faq-item active">
+              <button class="faq-question" type="button" aria-expanded="true">
+                How early should I book a trip?
+              </button>
+              <div class="faq-answer">
+                <p>For popular destinations, booking 2 to 4 months in advance usually secures the best rates, accommodation, and flight availability.</p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                Can I customize an itinerary for my budget?
+              </button>
+              <div class="faq-answer">
+                <p>Absolutely. ROAMLY supports flexible planning across luxury, mid-range, and budget-conscious trip styles without sacrificing experience quality.</p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                Is it safe to travel solo?
+              </button>
+              <div class="faq-answer">
+                <p>Solo travel is often comfortable when planned well. Choose trusted transportation, local updates, and private transfers for better peace of mind.</p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                What documents do I need?
+              </button>
+              <div class="faq-answer">
+                <p>Always carry your passport, visa requirements, travel insurance, and copies of key reservations. Digital backups are important if you misplace originals.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="#home" aria-label="ROAMLY home">
+            <span class="brand-mark">R</span>
+            <span class="brand-text">
+              <strong>ROAMLY</strong>
+              <small>Your Journey, Your Story.</small>
+            </span>
+          </a>
+          <p>Thoughtful travel planning for immersive experiences, meaningful memories, and effortless exploration.</p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#explore">Destinations</a></li>
+            <li><a href="#itinerary">Itineraries</a></li>
+            <li><a href="#guide">Travel Guide</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul class="footer-links compact-links">
+            <li><a href="mailto:hello@roamly.travel">hello@roamly.travel</a></li>
+            <li><a href="tel:+11234567890">+1 (123) 456-7890</a></li>
+            <li>24/7 Trip Concierge</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Newsletter</h3>
+          <form class="newsletter-form">
+            <label class="sr-only" for="newsletterEmail">Email address</label>
+            <input id="newsletterEmail" type="email" placeholder="Your email address" />
+            <button type="submit" class="btn btn-primary">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 ROAMLY. Crafted for unforgettable journeys.</p>
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Pinterest">Pinterest</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
